@@ -29,8 +29,10 @@ fig = go.Figure(
         )
     ]
 )
-# Update layout with requested styling
-polar=dict(
+
+# Correctly indented layout update
+fig.update_layout(
+    polar=dict(
         bgcolor='black',
         radialaxis=dict(
             visible=True,
