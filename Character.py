@@ -6,7 +6,7 @@ st.set_page_config(page_title="Radar Chart", layout="centered")
 st.title("📊 Interactive Radar Chart")
 
 # Define the radar chart labels
-categories = ['Strength', 'Speed', 'Endurance', 'Flexibility', 'Agility', 'Balance']
+categories = ['Vitality', 'Stamina', 'Dexterity', 'Flexibility', 'Intellect', 'Personality']
 
 # Create sliders for each category
 values = []
