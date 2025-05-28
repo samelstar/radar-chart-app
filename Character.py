@@ -29,12 +29,25 @@ fig = go.Figure(
         )
     ]
 )
-
-fig.update_layout(
-    polar=dict(
-        radialaxis=dict(visible=True, range=[0, 100])
+# Update layout with requested styling
+polar=dict(
+        bgcolor='black',
+        radialaxis=dict(
+            visible=True,
+            range=[0, 100],
+            gridcolor='white',
+            linecolor='white',
+            tickfont=dict(color='white'),
+        ),
+        angularaxis=dict(
+            gridcolor='white',
+            linecolor='white',
+            tickfont=dict(color='yellow'),
+        ),
     ),
     showlegend=False,
+    paper_bgcolor='black',
+    plot_bgcolor='black',
 )
 
 st.plotly_chart(fig, use_container_width=True)
