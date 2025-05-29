@@ -19,11 +19,6 @@ for cat in categories:
     val = st.slider(cat, 0, 100, st.session_state[cat], key=cat)
     values.append(val)
 
-# Create sliders for each category
-values = []
-for category in categories:
-    val = st.slider(f'{category}', 0, 100, 50)
-    values.append(val)
 
 # Radar charts need the data to be circular
 values += values[:1]
