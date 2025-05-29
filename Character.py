@@ -8,6 +8,23 @@ st.title("📊 Interactive Radar Chart")
 # Define the radar chart labels
 categories = ['Vitality', 'Stamina', 'Dexterity', 'Flexibility', 'Intellect', 'Personality']
 
+# Initialize default values in session state if not already present
+for cat in categories:
+    if cat not in st.session_state:
+        st.session_state[cat] = 50  # default slider value
+
+# Create sliders using session_state
+values = []
+for cat in categories:
+    st.session_state[cat] = st.slider(
+        cat, 
+        0, 
+        100, 
+        st.session_state[cat], 
+        key=cat
+    )
+    values.append(st.session_state[cat])
+
 # Create sliders for each category
 values = []
 for category in categories:
