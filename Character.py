@@ -6,7 +6,7 @@ st.set_page_config(page_title="Radar Chart", layout="centered")
 st.title("📊 Interactive Radar Chart")
 
 # Define the radar chart labels
-categories = ['Vitality', 'Stamina', 'Dexterity', 'Flexibility', 'Intellect', 'Personality']
+categories = ['Vitality', 'Stamina', 'Dexterity', 'Intellect', 'Personality']
 
 # Initialize default values in session state if not already present
 for cat in categories:
