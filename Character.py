@@ -16,13 +16,7 @@ for cat in categories:
 # Create sliders using session_state
 values = []
 for cat in categories:
-    st.session_state[cat] = st.slider(
-        cat, 
-        0, 
-        100, 
-        st.session_state[cat], 
-        key=cat
-    )
+    val = st.session_state[cat] = st.slider(cat, 0, 100, st.session_state[cat], key=cat)
     values.append(st.session_state[cat])
 
 # Create sliders for each category
